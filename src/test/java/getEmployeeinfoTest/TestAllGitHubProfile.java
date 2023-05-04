@@ -15,5 +15,10 @@ public class TestAllGitHubProfile extends GitHubAPI {
 
 
         getSeconduser();
+
+    }
+    @Test
+    public void getThirdUser(){
+        GetThirdUser();
     }
 }

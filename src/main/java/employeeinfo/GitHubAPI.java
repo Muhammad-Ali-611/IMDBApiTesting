@@ -31,4 +31,13 @@ public class GitHubAPI {
     }
 
 
+    String ApiUser = "https://api.github.com/users/shahid";
+     public void GetThirdUser(){
+         Response response = given().when().get(ApiUser).then().extract().response();
+         response.then().
+                 body("id", equalTo(71684) ).
+                 body("avatar_url", equalTo("https://avatars.githubusercontent.com/u/71684?v=4")).
+                 body("name", equalTo("Shahid PA"));
+         response.getBody().prettyPrint();
+      }
 }
